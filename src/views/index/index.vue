@@ -6,6 +6,7 @@
         <my-menu slot="menu"></my-menu>
       </my-header>
     </div>
+    测试一下提交功能
   </div>
 </template>
 <style lang="scss">
