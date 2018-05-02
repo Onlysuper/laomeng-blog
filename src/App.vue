@@ -1,9 +1,5 @@
 <template>
-  <div id="app">
-    branch test
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 
 <script>
