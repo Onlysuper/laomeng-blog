@@ -6,7 +6,7 @@
         <my-menu slot="menu"></my-menu>
       </my-header>
     </div>
-    测试一下提交功能
+
   </div>
 </template>
 <style lang="scss">
@@ -20,6 +20,7 @@
 import Menu from "@/components/Menu"
 import Header from "@/components/Header"
 import Logo from "@/components/Logo"
+import Banner from "@/components/Banner"
 export default {
   name: "MyIndex",
   components:
@@ -27,6 +28,7 @@ export default {
       "MyMenu": Menu,
       "MyHeader": Header,
       "MyLogo": Logo,
+      "MyBanner": Banner
     }
   ,
 }
