@@ -1,12 +1,14 @@
 <template>
-  <div class="top-header">
-    <div class="container">
-      <my-header>
-        <my-logo slot="logo"></my-logo>
-        <my-menu slot="menu"></my-menu>
-      </my-header>
+  <div>
+    <div class="top-header">
+      <div class="container">
+        <my-header>
+          <my-logo slot="logo"></my-logo>
+          <my-menu slot="menu"></my-menu>
+        </my-header>
+      </div>
     </div>
-
+    <my-banner></my-banner>
   </div>
 </template>
 <style lang="scss">
