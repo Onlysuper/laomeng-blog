@@ -2,20 +2,22 @@
   <div class="mene-box">
     <div id="menu">
       <ul>
-        <li v-for="(item,index) in menulist" :key="index" @click="movebg(item,index)">
-          {{item.title}}
+        <!-- <li class="list-item" v-for="(item,index) in menulist" :key="index" @click="movebg(item,index)" @mouseenter.self="menuHover($parent,index)" @mouseleave="menuLeave($parent,index)"> -->
+        <li class="list-item" v-for="(item,index) in menulist" :key="index" @click="movebg(item,index)">
+          <div class="menu-title">
+            <router-link :to="item.link">{{item.title}}</router-link>
+          </div>
+          <div class="menubg">{{item.title}}</div>
         </li>
-        <div class="menubg"></div>
       </ul>
     </div>
-    <!-- <div class="se">
-      选中的ID为：{{id}}
-    </div> -->
   </div>
 </template>
 <style lang="scss">
+@import "../../assets/sass/color.scss";
 .mene-box {
   flex: 1;
+  max-width: 500px;
   #menu {
     width: 100%;
     padding: 0 10%;
@@ -24,72 +26,93 @@
   #menu ul {
     display: flex;
     position: relative;
-    li {
+
+    li.list-item {
       flex: 1;
-      line-height: 40px;
+      // line-height: 55px;
       color: #fff;
       font-size: 14px;
       cursor: pointer;
       text-align: center;
       position: relative;
       z-index: 2;
-    }
-    .menubg {
-      position: absolute;
-      background: #8f0000;
-      height: 40px;
-      top: 0;
-      z-index: 1;
-      transition: all 0.1s;
-      left: 0;
-      width: calc(100%/7);
+      overflow: hidden;
+
+      .menu-title {
+        position: relative;
+        z-index: 1;
+        height: 55px;
+        line-height: 55px;
+        transition: all 0.3s;
+      }
+      .menubg {
+        position: absolute;
+        top: 55px;
+        z-index: 1;
+        transition: all 0.5s;
+        left: 0;
+        width: 100%;
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg); /* Safari 和 Chrome */
+        -moz-transform: rotateX(180deg);
+        opacity: 0.6;
+      }
+      &:hover {
+        color: $active-text;
+        .menubg {
+          top: 35px;
+        }
+      }
+      // background: #fff;
     }
   }
 }
 </style>
  <script>
+// import BScroll from 'better-scroll'
 export default {
+  components: {
+  },
   data: function () {
     return {
+      scroll: "",
       id: 1,
+
       menulist: [{
         title: '首页',
-        value: 1
+        value: 1,
+        link: "/",
       }, {
-        title: '输入',
-        value: 2
+        title: '技术咖',
+        value: 4,
+        link: "/technology",
+        children: [
+        ]
       }, {
-        title: '媒体',
-        value: 3
+        title: '生活家',
+        value: 5,
+        link: "/life"
       }, {
-        title: '导航',
-        value: 4
-      }, {
-        title: '其他',
-        value: 5
-      }, {
-        title: '网页模板',
-        value: 6
-      }, {
-        title: '常用代码',
-        value: 7
+        title: '关于我',
+        value: 6,
+        link: "/about"
       }]
     }
   },
+  created() {
+  },
   mounted() {
-    //获取menu宽度
-    let menuwidth = document.querySelector("#menu ul").offsetWidth
-    //获取li
-    let liwidth = document.querySelectorAll("#menu li")
-    //背景
-    let bgWidth = document.querySelector(".menubg")
   },
   methods: {
     movebg(item, index) {
-      let bgWidth = document.querySelector(".menubg")
-      let selfLeft = document.querySelectorAll("#menu li")[index].offsetLeft
-      bgWidth.style.left = selfLeft + 'px'
-    }
+    },
+    // menuHover(parent, index) {
+    //   $(parent.$el).find(".list-item").find('.menubg').css({ top: "55px" });
+    //   $(parent.$el).find(".list-item").eq(index).find('.menubg').animate({ top: "32px" });
+    // },
+    // menuLeave(parent) {
+    //   $(".list-item").find('.menubg').css({ top: "55px" });
+    // }
   }
 }
 </script>

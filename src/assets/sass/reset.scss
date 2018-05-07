@@ -5,6 +5,10 @@ html,body,div,h1,h2,h3,h4,h5,h6,ul,li,span{
 }
 html,body{
   font-size: 14px;
+  background: #ccc;
+   background: url(../imgs/bg.jpg) no-repeat;
+  // background-size: cover;
+  background-attachment:fixed;
 }
 ul,li{
   list-style: none;
@@ -13,7 +17,7 @@ a{
   text-decoration: none;
 }
 body{
-  background: #ccc;
+  // background: #ccc;
 }
 .container{
   max-width: 1000px;

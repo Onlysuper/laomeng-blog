@@ -1,65 +1,61 @@
 <template>
-  <div v-bannerAnimite class="banner">
+  <div class="banner-box">
+    <div class="container user-box">
+      <div class="header-img">
+        <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
+      </div>
+      <div class="header-img">
+        <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
+      </div>
+      <div class="header-img">
+        <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
+      </div>
+      <div class="user-text">
+        <h2>享受就是快乐</h2>
+        <p>我付出的是真诚，做的是情怀。</p>
+        <p>我付出的是真诚，做的是情怀。</p>
+        <p>我付出的是真诚，做的是情怀。</p>
+      </div>
+    </div>
   </div>
 </template>
 <style lang="scss">
-.banner {
-  background: url(../../assets/imgs/bg.jpg) no-repeat;
-  background-size: cover;
+.banner-box {
   height: 100vh;
-  margin-bottom: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.example {
-  background: #283339;
-  padding: 10px;
-  margin-bottom: 50px;
-}
-.code {
-  margin-left: -100px;
-  font-size: 1.4em;
-  font-weight: 500;
-  margin-bottom: 0;
-}
-.selector,
-.brace {
-  color: #849d66;
-}
-.method {
-  color: #b2bbc4;
-}
-.jq {
-  color: #5d8a87;
-}
-.key {
-  color: #8666a3;
-}
-.comment {
-  color: #96a4be;
-}
-</style>
-<script>
-import "@src/common/circleMagic.js";
-export default {
-  directives: {
-    bannerAnimite: {
-      // 指令的定义
-      inserted(el) {
-        $(el).circleMagic({
-          radius: 35,
-          density: .1,
-          color: 'rgba(255,255,255, .4)',
-          clearOffset: .9
-        });
+  width: 100%;
+  /* background: rgba(255, 255, 255, 0.5); */
+  color: #fff;
+  margin-top: 55px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 10;
+  .user-box {
+    text-align: center;
+    .header-img {
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 100%;
+      margin: 30vh 20px 0;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .user-text {
+      padding: 10px 0;
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+      // background: rgba(255, 255, 255, 0.5);
+      z-index: 20;
+      position: relative;
+      h2 {
+        margin: 20px 0;
       }
     }
   }
 }
-</script>
+</style>
