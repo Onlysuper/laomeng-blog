@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import myIndex from '@/views/index'
 import myHome from '@/views/home'
 import myAbout from '@/views/about'
+import myLife from '@/views/life'
+import myTechnology from '@/views/technology'
 
 Vue.use(Router)
 
@@ -21,6 +23,14 @@ export default new Router({
         {
           path: 'about',
           component: myAbout
+        },
+        {
+          path: 'technology',
+          component: myTechnology
+        },
+        {
+          path: 'life',
+          component: myLife
         }
       ]
     }

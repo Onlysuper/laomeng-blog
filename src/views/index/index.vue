@@ -1,6 +1,8 @@
 <template>
   <div>
-    <!-- <my-back-pao></my-back-pao> -->
+    <my-back-pao>
+      <my-banner></my-banner>
+    </my-back-pao>
     <div class="container-box">
       <div class="top-header">
         <!-- <div class="container"> -->
@@ -10,10 +12,9 @@
         </my-header>
         <!-- </div> -->
       </div>
-      <my-banner></my-banner>
       <router-view></router-view>
-
     </div>
+    <my-footer></my-footer>
   </div>
 </template>
 <style lang="scss">
@@ -21,7 +22,7 @@
 .container-box {
   position: relative;
   z-index: 20;
-  // background: red;
+  background: #f1f3f3;
   .top-header {
     z-index: 11;
     // background: $header-back;
@@ -39,7 +40,7 @@ import Header from "@/components/Header"
 import Logo from "@/components/Logo"
 import BackPao from "@/components/BackPao"
 import Banner from "@/components/Banner"
-
+import Footer from "@/components/Footer"
 export default {
   name: "MyIndex",
   components:
@@ -48,7 +49,8 @@ export default {
       "MyHeader": Header,
       "MyLogo": Logo,
       "MyBanner": Banner,
-      "MyBackPao": BackPao
+      "MyBackPao": BackPao,
+      "MyFooter": Footer
     }
   ,
 }

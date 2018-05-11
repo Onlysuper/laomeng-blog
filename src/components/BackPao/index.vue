@@ -1,21 +1,21 @@
 <template>
   <div v-backAnimite class="back">
-    <div class="">
-      <h1></h1>
-      <p></p>
+    <div class="content">
+      <slot></slot>
     </div>
   </div>
 </template>
 <style lang="scss">
 .back {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  // background: url(../../assets/imgs/bg.jpg) no-repeat;
-  // background-size: cover;
-  height: 100vh;
+  // position: fixed;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  background: url(../../assets/imgs/bg.jpg) no-repeat;
+  background-size: cover;
+  height: 90vh;
+  // background-attachment: fixed;
   // margin-bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,6 +25,15 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
+  .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(107, 190, 152, 0.9);
+  }
   .example {
     background: #283339;
     padding: 10px;

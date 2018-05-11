@@ -27,7 +27,7 @@
 .article-list {
   padding: 20px 10px;
   border-bottom: 1px solid #ccc;
-  background: rgba(250, 250, 250, 0.5);
+  // background: rgba(250, 250, 250, 0.5);
   h2 {
     font-size: 16px;
     padding: 10px 0;

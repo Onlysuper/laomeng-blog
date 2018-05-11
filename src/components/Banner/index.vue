@@ -1,12 +1,7 @@
 <template>
   <div class="banner-box">
     <div class="container user-box">
-      <div class="header-img">
-        <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
-      </div>
-      <div class="header-img">
-        <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
-      </div>
+
       <div class="header-img">
         <img src="http://seopic.699pic.com/photo/50049/2298.jpg_wh1200.jpg" alt="">
       </div>
@@ -21,7 +16,7 @@
 </template>
 <style lang="scss">
 .banner-box {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   /* background: rgba(255, 255, 255, 0.5); */
   color: #fff;
@@ -38,7 +33,7 @@
       display: inline-block;
       overflow: hidden;
       border-radius: 100%;
-      margin: 30vh 20px 0;
+      margin: 15vh 20px 0;
       img {
         width: 100%;
         height: 100%;
@@ -52,8 +47,11 @@
       // background: rgba(255, 255, 255, 0.5);
       z-index: 20;
       position: relative;
+      // background: rgba(0, 0, 0, 0.3);
       h2 {
         margin: 20px 0;
+        font-size: 30px;
+        font-weight: 300;
       }
     }
   }

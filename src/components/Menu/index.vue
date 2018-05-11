@@ -4,10 +4,12 @@
       <ul>
         <!-- <li class="list-item" v-for="(item,index) in menulist" :key="index" @click="movebg(item,index)" @mouseenter.self="menuHover($parent,index)" @mouseleave="menuLeave($parent,index)"> -->
         <li class="list-item" v-for="(item,index) in menulist" :key="index" @click="movebg(item,index)">
-          <div class="menu-title">
-            <router-link :to="item.link">{{item.title}}</router-link>
-          </div>
-          <div class="menubg">{{item.title}}</div>
+          <router-link :to="item.link">
+            <div class="menu-title">
+              {{item.title}}
+            </div>
+            <div class="menubg">{{item.title}}</div>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -30,20 +32,23 @@
     li.list-item {
       flex: 1;
       // line-height: 55px;
-      color: #fff;
+
       font-size: 14px;
       cursor: pointer;
       text-align: center;
       position: relative;
       z-index: 2;
       overflow: hidden;
-
+      a {
+        display: inline-block;
+      }
       .menu-title {
         position: relative;
         z-index: 1;
         height: 55px;
         line-height: 55px;
         transition: all 0.3s;
+        color: #fff;
       }
       .menubg {
         position: absolute;
@@ -55,7 +60,8 @@
         transform: rotateX(180deg);
         -webkit-transform: rotateX(180deg); /* Safari 和 Chrome */
         -moz-transform: rotateX(180deg);
-        opacity: 0.6;
+        opacity: 0.3;
+        color: #fff;
       }
       &:hover {
         color: $active-text;

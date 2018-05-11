@@ -8,6 +8,7 @@
       <my-article></my-article>
     </div>
   </div>
+
 </template>
 <style lang="scss">
 .main-box {
@@ -17,9 +18,11 @@
   .left-box {
     flex: 1;
     margin-right: 5px;
+    background: rgba(255, 255, 255, 0.8);
     // background: #ccc;
   }
   .right-box {
+    background: rgba(255, 255, 255, 0.7);
     width: 250px;
     margin-left: 5px;
     // background: #ccc;
@@ -30,11 +33,12 @@
 <script>
 import Article from "@/components/Article"
 import About from "@/components/About"
+
 export default {
   components:
     {
       "MyArticle": Article,
-      "MyAbout": About,
+      "MyAbout": About
     }
 }
 </script>
