@@ -70,12 +70,12 @@ export default {
     backAnimite: {
       // 指令的定义
       inserted(el) {
-        $(el).circleMagic({
-          radius: 35,
-          density: .1,
-          color: 'rgba(255,255,255, .4)',
-          clearOffset: .9
-        });
+        // $(el).circleMagic({
+        //   radius: 35,
+        //   density: .1,
+        //   color: 'rgba(255,255,255, .4)',
+        //   clearOffset: .9
+        // });
       }
     }
   }

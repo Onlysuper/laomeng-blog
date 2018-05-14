@@ -11,7 +11,8 @@
   flex-grow: 0;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: center;
+
   span,
   div {
     line-height: 40px;

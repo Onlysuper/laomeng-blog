@@ -20,6 +20,9 @@
 .mene-box {
   flex: 1;
   max-width: 500px;
+  display: flex;
+  align-items: center;
+  // align-items: center;
   #menu {
     width: 100%;
     padding: 0 10%;
@@ -45,8 +48,8 @@
       .menu-title {
         position: relative;
         z-index: 1;
-        height: 55px;
-        line-height: 55px;
+        // height: 55px;
+        line-height: 100%;
         transition: all 0.3s;
         color: #fff;
       }
